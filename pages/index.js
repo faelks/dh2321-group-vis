@@ -1,65 +1,48 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import { useRef, useEffect } from "react";
+import * as d3 from "d3";
 
 export default function Home() {
+  const chartEl = useRef(null);
+  const dataset = [100, 200, 300, 400, 500];
+
+  useEffect(() => {
+    let size = 400;
+    let svg = d3
+      .select(chartEl.current)
+      .append("svg")
+      .attr("width", size)
+      .attr("height", size);
+
+    let rectWidth = 75;
+    svg
+      .selectAll("rect")
+      .data(dataset)
+      .enter()
+      .append("rect")
+      .attr("x", (d, i) => 5 + i * (rectWidth + 5))
+      .attr("y", (d) => size - d)
+      .attr("width", rectWidth)
+      .attr("height", (d) => d)
+      .attr("fill", "teal");
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.header}>
+        <h1>DH2320 - Group Visualisation</h1>
+        <p>Felix Gudéhn, Zezhe Huang, Xinyi Wang</p>
+      </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <div className={styles.chart} ref={chartEl} />
+      <p className={styles.caption}>
+        Some chart that visualises the group form responses
+      </p>
     </div>
-  )
+  );
 }
