@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as np
+from hobby_cat import get_hobby_category
+from in_5_year_cat import get_plan_category
+
+df = pd.DataFrame(pd.read_excel("selfIntro.xlsx"))
+col_name = ["alias", "major", "degree", "hobbies",
+    "kth_canvas_usage", "kth_social_usage", "facebook_usage",
+    "course_expectations", "info_vis_skill", "stats_skill",
+    "maths_skill", "drawing_skill", "computer_skill",
+    "programming_skill", "cg_skill",
+    "hci_skill", "user_experience_skill", 
+    "communication_skill", "collaboration_skill",
+    "code_repository_skill", "in_5_years"]
+assert(len(col_name) == len(df.columns))
+df.columns = col_name
+
+df['hobbies'] = df['hobbies'].replace(np.nan, None)
+df['hobbies'] = df['hobbies'].apply(lambda x: get_hobby_category(x))
+
+df['in_5_years'] = df['in_5_years'].replace(np.nan, None)
+df['in_5_years'] = df['in_5_years'].apply(lambda x: get_plan_category(x))
