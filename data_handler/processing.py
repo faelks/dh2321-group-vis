@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from hobby_cat import get_hobby_category
 from in_5_year_cat import get_plan_category
+from kth_canvas_usage_quantify import get_canvas_usage_category
 
 df = pd.DataFrame(pd.read_excel("selfIntro.xlsx"))
 col_name = ["alias", "major", "degree", "hobbies",
@@ -20,3 +21,8 @@ df['hobbies'] = df['hobbies'].apply(lambda x: get_hobby_category(x))
 
 df['in_5_years'] = df['in_5_years'].replace(np.nan, None)
 df['in_5_years'] = df['in_5_years'].apply(lambda x: get_plan_category(x))
+
+df['kth_canvas_usage'] = df['kth_canvas_usage'].replace(np.nan, None)
+df['kth_canvas_usage'] = df['kth_canvas_usage'].apply(lambda x:get_canvas_usage_category(x))
+
+df
