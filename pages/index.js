@@ -8,6 +8,7 @@ export default function Home() {
   const dataset = [100, 200, 300, 400, 500];
 
   useEffect(() => {
+
     let size = 400;
     let svg = d3
       .select(chartEl.current)
@@ -25,7 +26,7 @@ export default function Home() {
       .attr("y", (d) => size - d)
       .attr("width", rectWidth)
       .attr("height", (d) => d)
-      .attr("fill", "teal");
+      .attr("fill", "red");
   }, []);
 
   return (
