@@ -2,7 +2,7 @@ from enum import Enum
 import numpy as np
 
 #Quantify the fixed options
-def get_canvas_usage_category(original_text):
+def get_canvas_usage_number(original_text):
     canvas_usage = None
 
     #mapping options to numbers

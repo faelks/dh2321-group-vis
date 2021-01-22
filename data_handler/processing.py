@@ -2,7 +2,9 @@ import pandas as pd
 import numpy as np
 from hobby_cat import get_hobby_category
 from in_5_year_cat import get_plan_category
-from kth_canvas_usage_quantify import get_canvas_usage_category
+from kth_canvas_usage_quantify import get_canvas_usage_number
+from kth_social_usage_quantify import get_social_usage_number
+from facebook_usage_quantify import get_facebook_usage_number
 
 df = pd.DataFrame(pd.read_excel("selfIntro.xlsx"))
 col_name = ["alias", "major", "degree", "hobbies",
@@ -23,6 +25,12 @@ df['in_5_years'] = df['in_5_years'].replace(np.nan, None)
 df['in_5_years'] = df['in_5_years'].apply(lambda x: get_plan_category(x))
 
 df['kth_canvas_usage'] = df['kth_canvas_usage'].replace(np.nan, None)
-df['kth_canvas_usage'] = df['kth_canvas_usage'].apply(lambda x:get_canvas_usage_category(x))
+df['kth_canvas_usage'] = df['kth_canvas_usage'].apply(lambda x:get_canvas_usage_number(x))
+
+df['kth_social_usage'] = df['kth_social_usage'].replace(np.nan, None)
+df['kth_social_usage'] = df['kth_social_usage'].apply(lambda x:get_social_usage_number(x))
+
+df['facebook_usage'] = df['facebook_usage'].replace(np.nan, None)
+df['facebook_usage'] = df['facebook_usage'].apply(lambda x:get_facebook_usage_number(x))
 
 df
