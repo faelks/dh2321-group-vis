@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+from major_cat import get_major_category
+from degree_cat import get_degree_category
 from hobby_cat import get_hobby_category
 from in_5_year_cat import get_plan_category
 from kth_canvas_usage_quantify import get_canvas_usage_number
@@ -17,6 +19,12 @@ col_name = ["alias", "major", "degree", "hobbies",
     "code_repository_skill", "in_5_years"]
 assert(len(col_name) == len(df.columns))
 df.columns = col_name
+
+df['major'] = df['major'].replace(np.nan, None)
+df['major'] = df['major'].apply(lambda x: get_major_category(x))
+
+df['degree'] = df['degree'].replace(np.nan, None)
+df['degree'] = df['degree'].apply(lambda x: get_degree_category(x))
 
 df['hobbies'] = df['hobbies'].replace(np.nan, None)
 df['hobbies'] = df['hobbies'].apply(lambda x: get_hobby_category(x))
