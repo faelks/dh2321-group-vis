@@ -35,3 +35,6 @@ yarn-error.log*
 
 venv/
 **/__pycache__/
+
+# jupyter
+data_handler/.ipynb_checkpoints
