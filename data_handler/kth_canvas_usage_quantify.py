@@ -1,16 +1,18 @@
 from enum import Enum
 import numpy as np
 
-#Quantify the fixed options
+# Quantify the fixed options
+
+
 def get_canvas_usage_number(original_text):
     canvas_usage = None
 
-    #mapping options to numbers
-    usage = {"Yes - several times a day.": 0, "Yes, but only a few times a week.": 1, "No, but I wouldn't mind using it.": 2}
+    # mapping options to numbers
+    # 0 indicates a low usage and 2 a high usage of canvas
+    usage = {"Yes - several times a day.": 2, "Yes, but only a few times a week.": 1, "No, but I wouldn't mind using it.": 0}
     canvas_usage = usage.get(original_text)
 
     return canvas_usage
-
 
 
 """ class CANVAS_USAGE(Enum):
@@ -43,5 +45,3 @@ CANVAS_USAGE_CORPUS = {
     if np.sum(canvas_usage_arr) == 0:
         canvas_usage_arr[0, CANVAS_USAGE.OTHERS.value]  = 1
     return canvas_usage_arr """
-
-
