@@ -1,14 +1,15 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import SampleChart from "../charts/SampleChart";
+import data from "../data/data_simplified.json";
+import ParalellCoordinates from "../charts/ParalellCoordinates";
 
-export default function Home() {
-  const dataset = [100, 200, 300, 400, 500];
+export default function Parallel() {
+  console.log(`Show data fetched. Count: ${data.length}`);
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>DH2320 Group Vis</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.header}>
@@ -16,10 +17,8 @@ export default function Home() {
         <p>Felix Gudéhn, Zezhe Huang, Xinyi Wang</p>
       </div>
 
-      <SampleChart data={dataset} />
-      <p className={styles.caption}>
-        Some chart that visualises the group form responses
-      </p>
+      <ParalellCoordinates data={data}/>
     </div>
   );
 }
+

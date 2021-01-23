@@ -36,3 +36,9 @@ yarn-error.log*
 venv/
 **/__pycache__/
 *Zone.Identifier
+
+# jupyter
+data_handler/.ipynb_checkpoints
+
+# vscode
+.vscode
