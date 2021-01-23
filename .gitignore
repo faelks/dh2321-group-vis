@@ -38,3 +38,6 @@ venv/
 
 # jupyter
 data_handler/.ipynb_checkpoints
+
+# vscode
+.vscode
