@@ -17,7 +17,13 @@
     "user_experience_skill": 3,
     "communication_skill": 5,
     "collaboration_skill": 5,
-    "code_repository_skill": 5
+    "code_repository_skill": 5,
+    "design_skill": 3.75,
+    "design_skill_diff": -0.4069767442,
+    "technical_skill": 5.1666666667,
+    "technical_skill_diff": -0.0697674419,
+    "teamwork_skill": 5.0,
+    "teamwork_skill_diff": -1.8604651163
   },
   {
     "alias": "NoobKiz",
@@ -37,7 +43,13 @@
     "user_experience_skill": 5,
     "communication_skill": 7,
     "collaboration_skill": 7,
-    "code_repository_skill": 9
+    "code_repository_skill": 9,
+    "design_skill": 5.75,
+    "design_skill_diff": 1.5930232558,
+    "technical_skill": 7.0,
+    "technical_skill_diff": 1.7635658915,
+    "teamwork_skill": 7.0,
+    "teamwork_skill_diff": 0.1395348837
   },
   {
     "alias": "Rella666",
@@ -57,7 +69,13 @@
     "user_experience_skill": 3,
     "communication_skill": 7,
     "collaboration_skill": 7,
-    "code_repository_skill": 2
+    "code_repository_skill": 2,
+    "design_skill": 5.25,
+    "design_skill_diff": 1.0930232558,
+    "technical_skill": 4.5,
+    "technical_skill_diff": -0.7364341085,
+    "teamwork_skill": 7.0,
+    "teamwork_skill_diff": 0.1395348837
   },
   {
     "alias": "Kropotkin42",
@@ -77,7 +95,13 @@
     "user_experience_skill": 6,
     "communication_skill": 9,
     "collaboration_skill": 6,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 4.5,
+    "design_skill_diff": 0.3430232558,
+    "technical_skill": 5.1666666667,
+    "technical_skill_diff": -0.0697674419,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "Kyrie11",
@@ -97,7 +121,13 @@
     "user_experience_skill": 5,
     "communication_skill": 5,
     "collaboration_skill": 9,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 4.75,
+    "design_skill_diff": 0.5930232558,
+    "technical_skill": 5.1666666667,
+    "technical_skill_diff": -0.0697674419,
+    "teamwork_skill": 7.0,
+    "teamwork_skill_diff": 0.1395348837
   },
   {
     "alias": "chiri",
@@ -117,7 +147,13 @@
     "user_experience_skill": 4,
     "communication_skill": 5,
     "collaboration_skill": 5,
-    "code_repository_skill": 9
+    "code_repository_skill": 9,
+    "design_skill": 6.0,
+    "design_skill_diff": 1.8430232558,
+    "technical_skill": 4.8333333333,
+    "technical_skill_diff": -0.4031007752,
+    "teamwork_skill": 5.0,
+    "teamwork_skill_diff": -1.8604651163
   },
   {
     "alias": "Superwoman97",
@@ -137,7 +173,13 @@
     "user_experience_skill": 6,
     "communication_skill": 10,
     "collaboration_skill": 5,
-    "code_repository_skill": 4
+    "code_repository_skill": 4,
+    "design_skill": 4.25,
+    "design_skill_diff": 0.0930232558,
+    "technical_skill": 3.6666666667,
+    "technical_skill_diff": -1.5697674419,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "cowboy55",
@@ -157,7 +199,13 @@
     "user_experience_skill": 5,
     "communication_skill": 10,
     "collaboration_skill": 8,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 5.0,
+    "design_skill_diff": 0.8430232558,
+    "technical_skill": 5.1666666667,
+    "technical_skill_diff": -0.0697674419,
+    "teamwork_skill": 9.0,
+    "teamwork_skill_diff": 2.1395348837
   },
   {
     "alias": "phips77",
@@ -177,7 +225,13 @@
     "user_experience_skill": 6,
     "communication_skill": 9,
     "collaboration_skill": 8,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 3.5,
+    "design_skill_diff": -0.6569767442,
+    "technical_skill": 4.0,
+    "technical_skill_diff": -1.2364341085,
+    "teamwork_skill": 8.5,
+    "teamwork_skill_diff": 1.6395348837
   },
   {
     "alias": "Vis81",
@@ -197,7 +251,13 @@
     "user_experience_skill": 3,
     "communication_skill": 4,
     "collaboration_skill": 7,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 4.0,
+    "design_skill_diff": -0.1569767442,
+    "technical_skill": 5.0,
+    "technical_skill_diff": -0.2364341085,
+    "teamwork_skill": 5.5,
+    "teamwork_skill_diff": -1.3604651163
   },
   {
     "alias": "Ellakingen",
@@ -217,7 +277,13 @@
     "user_experience_skill": 2,
     "communication_skill": 10,
     "collaboration_skill": 5,
-    "code_repository_skill": 5
+    "code_repository_skill": 5,
+    "design_skill": 3.5,
+    "design_skill_diff": -0.6569767442,
+    "technical_skill": 4.5,
+    "technical_skill_diff": -0.7364341085,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "Cinnamon-Bun",
@@ -237,7 +303,13 @@
     "user_experience_skill": 1,
     "communication_skill": 8,
     "collaboration_skill": 7,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 2.75,
+    "design_skill_diff": -1.4069767442,
+    "technical_skill": 6.0,
+    "technical_skill_diff": 0.7635658915,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "Lapalus ",
@@ -257,7 +329,13 @@
     "user_experience_skill": 8,
     "communication_skill": 7,
     "collaboration_skill": 8,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 7.25,
+    "design_skill_diff": 3.0930232558,
+    "technical_skill": 6.1666666667,
+    "technical_skill_diff": 0.9302325581,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "4LB4",
@@ -277,7 +355,13 @@
     "user_experience_skill": 5,
     "communication_skill": 7,
     "collaboration_skill": 8,
-    "code_repository_skill": 5
+    "code_repository_skill": 5,
+    "design_skill": 5.0,
+    "design_skill_diff": 0.8430232558,
+    "technical_skill": 4.5,
+    "technical_skill_diff": -0.7364341085,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "Ray Primary",
@@ -297,7 +381,13 @@
     "user_experience_skill": 2,
     "communication_skill": 9,
     "collaboration_skill": 7,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 3.75,
+    "design_skill_diff": -0.4069767442,
+    "technical_skill": 6.6666666667,
+    "technical_skill_diff": 1.4302325581,
+    "teamwork_skill": 8.0,
+    "teamwork_skill_diff": 1.1395348837
   },
   {
     "alias": "papi33",
@@ -317,7 +407,13 @@
     "user_experience_skill": 2,
     "communication_skill": 1,
     "collaboration_skill": 4,
-    "code_repository_skill": 3
+    "code_repository_skill": 3,
+    "design_skill": 3.0,
+    "design_skill_diff": -1.1569767442,
+    "technical_skill": 2.3333333333,
+    "technical_skill_diff": -2.9031007752,
+    "teamwork_skill": 2.5,
+    "teamwork_skill_diff": -4.3604651163
   },
   {
     "alias": "Mustang22",
@@ -337,7 +433,13 @@
     "user_experience_skill": 5,
     "communication_skill": 7,
     "collaboration_skill": 6,
-    "code_repository_skill": 3
+    "code_repository_skill": 3,
+    "design_skill": 4.5,
+    "design_skill_diff": 0.3430232558,
+    "technical_skill": 4.5,
+    "technical_skill_diff": -0.7364341085,
+    "teamwork_skill": 6.5,
+    "teamwork_skill_diff": -0.3604651163
   },
   {
     "alias": "e4c6",
@@ -357,7 +459,13 @@
     "user_experience_skill": 2,
     "communication_skill": 6,
     "collaboration_skill": 7,
-    "code_repository_skill": 4
+    "code_repository_skill": 4,
+    "design_skill": 1.75,
+    "design_skill_diff": -2.4069767442,
+    "technical_skill": 3.5,
+    "technical_skill_diff": -1.7364341085,
+    "teamwork_skill": 6.5,
+    "teamwork_skill_diff": -0.3604651163
   },
   {
     "alias": "DancingTomato2",
@@ -377,7 +485,13 @@
     "user_experience_skill": 1,
     "communication_skill": 10,
     "collaboration_skill": 8,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 2.75,
+    "design_skill_diff": -1.4069767442,
+    "technical_skill": 5.5,
+    "technical_skill_diff": 0.2635658915,
+    "teamwork_skill": 9.0,
+    "teamwork_skill_diff": 2.1395348837
   },
   {
     "alias": "Frogster",
@@ -397,7 +511,13 @@
     "user_experience_skill": 4,
     "communication_skill": 6,
     "collaboration_skill": 6,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 4.5,
+    "design_skill_diff": 0.3430232558,
+    "technical_skill": 4.3333333333,
+    "technical_skill_diff": -0.9031007752,
+    "teamwork_skill": 6.0,
+    "teamwork_skill_diff": -0.8604651163
   },
   {
     "alias": "swoop11",
@@ -417,7 +537,13 @@
     "user_experience_skill": 6,
     "communication_skill": 8,
     "collaboration_skill": 8,
-    "code_repository_skill": 10
+    "code_repository_skill": 10,
+    "design_skill": 4.25,
+    "design_skill_diff": 0.0930232558,
+    "technical_skill": 6.5,
+    "technical_skill_diff": 1.2635658915,
+    "teamwork_skill": 8.0,
+    "teamwork_skill_diff": 1.1395348837
   },
   {
     "alias": "Maximillianmus",
@@ -437,7 +563,13 @@
     "user_experience_skill": 1,
     "communication_skill": 4,
     "collaboration_skill": 5,
-    "code_repository_skill": 4
+    "code_repository_skill": 4,
+    "design_skill": 3.0,
+    "design_skill_diff": -1.1569767442,
+    "technical_skill": 5.0,
+    "technical_skill_diff": -0.2364341085,
+    "teamwork_skill": 4.5,
+    "teamwork_skill_diff": -2.3604651163
   },
   {
     "alias": "hexachord",
@@ -457,7 +589,13 @@
     "user_experience_skill": 4,
     "communication_skill": 7,
     "collaboration_skill": 7,
-    "code_repository_skill": 8
+    "code_repository_skill": 8,
+    "design_skill": 4.0,
+    "design_skill_diff": -0.1569767442,
+    "technical_skill": 7.0,
+    "technical_skill_diff": 1.7635658915,
+    "teamwork_skill": 7.0,
+    "teamwork_skill_diff": 0.1395348837
   },
   {
     "alias": "Mark Hamill",
@@ -477,7 +615,13 @@
     "user_experience_skill": 3,
     "communication_skill": 8,
     "collaboration_skill": 7,
-    "code_repository_skill": 1
+    "code_repository_skill": 1,
+    "design_skill": 2.75,
+    "design_skill_diff": -1.4069767442,
+    "technical_skill": 3.0,
+    "technical_skill_diff": -2.2364341085,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "Spike123",
@@ -497,7 +641,13 @@
     "user_experience_skill": 5,
     "communication_skill": 7,
     "collaboration_skill": 7,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 4.5,
+    "design_skill_diff": 0.3430232558,
+    "technical_skill": 6.3333333333,
+    "technical_skill_diff": 1.0968992248,
+    "teamwork_skill": 7.0,
+    "teamwork_skill_diff": 0.1395348837
   },
   {
     "alias": "sejfz",
@@ -517,7 +667,13 @@
     "user_experience_skill": 7,
     "communication_skill": 3,
     "collaboration_skill": 6,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 6.0,
+    "design_skill_diff": 1.8430232558,
+    "technical_skill": 5.8333333333,
+    "technical_skill_diff": 0.5968992248,
+    "teamwork_skill": 4.5,
+    "teamwork_skill_diff": -2.3604651163
   },
   {
     "alias": "Lol123",
@@ -537,7 +693,13 @@
     "user_experience_skill": 2,
     "communication_skill": 6,
     "collaboration_skill": 5,
-    "code_repository_skill": 1
+    "code_repository_skill": 1,
+    "design_skill": 1.25,
+    "design_skill_diff": -2.9069767442,
+    "technical_skill": 2.1666666667,
+    "technical_skill_diff": -3.0697674419,
+    "teamwork_skill": 5.5,
+    "teamwork_skill_diff": -1.3604651163
   },
   {
     "alias": "Pencil12",
@@ -557,7 +719,13 @@
     "user_experience_skill": 4,
     "communication_skill": 8,
     "collaboration_skill": 7,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 5.5,
+    "design_skill_diff": 1.3430232558,
+    "technical_skill": 5.5,
+    "technical_skill_diff": 0.2635658915,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "Jericho",
@@ -577,7 +745,13 @@
     "user_experience_skill": 2,
     "communication_skill": 3,
     "collaboration_skill": 5,
-    "code_repository_skill": 4
+    "code_repository_skill": 4,
+    "design_skill": 3.5,
+    "design_skill_diff": -0.6569767442,
+    "technical_skill": 5.3333333333,
+    "technical_skill_diff": 0.0968992248,
+    "teamwork_skill": 4.0,
+    "teamwork_skill_diff": -2.8604651163
   },
   {
     "alias": "no one",
@@ -597,7 +771,13 @@
     "user_experience_skill": 1,
     "communication_skill": 5,
     "collaboration_skill": 5,
-    "code_repository_skill": 5
+    "code_repository_skill": 5,
+    "design_skill": 2.0,
+    "design_skill_diff": -2.1569767442,
+    "technical_skill": 7.0,
+    "technical_skill_diff": 1.7635658915,
+    "teamwork_skill": 5.0,
+    "teamwork_skill_diff": -1.8604651163
   },
   {
     "alias": "C3I2",
@@ -617,7 +797,13 @@
     "user_experience_skill": 7,
     "communication_skill": 8,
     "collaboration_skill": 6,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 5.25,
+    "design_skill_diff": 1.0930232558,
+    "technical_skill": 6.6666666667,
+    "technical_skill_diff": 1.4302325581,
+    "teamwork_skill": 7.0,
+    "teamwork_skill_diff": 0.1395348837
   },
   {
     "alias": "Monsterhunter98",
@@ -637,7 +823,13 @@
     "user_experience_skill": 4,
     "communication_skill": 6,
     "collaboration_skill": 6,
-    "code_repository_skill": 6
+    "code_repository_skill": 6,
+    "design_skill": 4.0,
+    "design_skill_diff": -0.1569767442,
+    "technical_skill": 5.6666666667,
+    "technical_skill_diff": 0.4302325581,
+    "teamwork_skill": 6.0,
+    "teamwork_skill_diff": -0.8604651163
   },
   {
     "alias": "raspberry666",
@@ -657,7 +849,13 @@
     "user_experience_skill": 2,
     "communication_skill": 8,
     "collaboration_skill": 7,
-    "code_repository_skill": 3
+    "code_repository_skill": 3,
+    "design_skill": 3.0,
+    "design_skill_diff": -1.1569767442,
+    "technical_skill": 5.0,
+    "technical_skill_diff": -0.2364341085,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "User14",
@@ -677,7 +875,13 @@
     "user_experience_skill": 6,
     "communication_skill": 10,
     "collaboration_skill": 8,
-    "code_repository_skill": 4
+    "code_repository_skill": 4,
+    "design_skill": 5.0,
+    "design_skill_diff": 0.8430232558,
+    "technical_skill": 5.0,
+    "technical_skill_diff": -0.2364341085,
+    "teamwork_skill": 9.0,
+    "teamwork_skill_diff": 2.1395348837
   },
   {
     "alias": "solarpunk",
@@ -697,7 +901,13 @@
     "user_experience_skill": 6,
     "communication_skill": 10,
     "collaboration_skill": 10,
-    "code_repository_skill": 4
+    "code_repository_skill": 4,
+    "design_skill": 6.25,
+    "design_skill_diff": 2.0930232558,
+    "technical_skill": 5.1666666667,
+    "technical_skill_diff": -0.0697674419,
+    "teamwork_skill": 10.0,
+    "teamwork_skill_diff": 3.1395348837
   },
   {
     "alias": "shuriken",
@@ -717,7 +927,13 @@
     "user_experience_skill": 3,
     "communication_skill": 7,
     "collaboration_skill": 4,
-    "code_repository_skill": 10
+    "code_repository_skill": 10,
+    "design_skill": 3.0,
+    "design_skill_diff": -1.1569767442,
+    "technical_skill": 5.5,
+    "technical_skill_diff": 0.2635658915,
+    "teamwork_skill": 5.5,
+    "teamwork_skill_diff": -1.3604651163
   },
   {
     "alias": "seed2",
@@ -737,7 +953,13 @@
     "user_experience_skill": 3,
     "communication_skill": 7,
     "collaboration_skill": 8,
-    "code_repository_skill": 1
+    "code_repository_skill": 1,
+    "design_skill": 3.0,
+    "design_skill_diff": -1.1569767442,
+    "technical_skill": 3.6666666667,
+    "technical_skill_diff": -1.5697674419,
+    "teamwork_skill": 7.5,
+    "teamwork_skill_diff": 0.6395348837
   },
   {
     "alias": "Unchain",
@@ -757,7 +979,13 @@
     "user_experience_skill": 1,
     "communication_skill": 9,
     "collaboration_skill": 9,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 4.5,
+    "design_skill_diff": 0.3430232558,
+    "technical_skill": 5.6666666667,
+    "technical_skill_diff": 0.4302325581,
+    "teamwork_skill": 9.0,
+    "teamwork_skill_diff": 2.1395348837
   },
   {
     "alias": "AGreatAlias19",
@@ -777,7 +1005,13 @@
     "user_experience_skill": 6,
     "communication_skill": 10,
     "collaboration_skill": 8,
-    "code_repository_skill": 2
+    "code_repository_skill": 2,
+    "design_skill": 4.25,
+    "design_skill_diff": 0.0930232558,
+    "technical_skill": 3.1666666667,
+    "technical_skill_diff": -2.0697674419,
+    "teamwork_skill": 9.0,
+    "teamwork_skill_diff": 2.1395348837
   },
   {
     "alias": "ratponto",
@@ -797,7 +1031,13 @@
     "user_experience_skill": 6,
     "communication_skill": 6,
     "collaboration_skill": 7,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 6.5,
+    "design_skill_diff": 2.3430232558,
+    "technical_skill": 7.3333333333,
+    "technical_skill_diff": 2.0968992248,
+    "teamwork_skill": 6.5,
+    "teamwork_skill_diff": -0.3604651163
   },
   {
     "alias": "Banana",
@@ -817,7 +1057,13 @@
     "user_experience_skill": 2,
     "communication_skill": 10,
     "collaboration_skill": 9,
-    "code_repository_skill": 7
+    "code_repository_skill": 7,
+    "design_skill": 2.25,
+    "design_skill_diff": -1.9069767442,
+    "technical_skill": 5.1666666667,
+    "technical_skill_diff": -0.0697674419,
+    "teamwork_skill": 9.5,
+    "teamwork_skill_diff": 2.6395348837
   },
   {
     "alias": "JoHa",
@@ -837,7 +1083,13 @@
     "user_experience_skill": 6,
     "communication_skill": 7,
     "collaboration_skill": 6,
-    "code_repository_skill": 9
+    "code_repository_skill": 9,
+    "design_skill": 6.5,
+    "design_skill_diff": 2.3430232558,
+    "technical_skill": 8.5,
+    "technical_skill_diff": 3.2635658915,
+    "teamwork_skill": 6.5,
+    "teamwork_skill_diff": -0.3604651163
   },
   {
     "alias": "ginger",
@@ -857,6 +1109,12 @@
     "user_experience_skill": 1,
     "communication_skill": 1,
     "collaboration_skill": 7,
-    "code_repository_skill": 9
+    "code_repository_skill": 9,
+    "design_skill": 3.0,
+    "design_skill_diff": -1.1569767442,
+    "technical_skill": 7.3333333333,
+    "technical_skill_diff": 2.0968992248,
+    "teamwork_skill": 4.0,
+    "teamwork_skill_diff": -2.8604651163
   }
 ]

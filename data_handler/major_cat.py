@@ -32,11 +32,11 @@ MAJOR_CORPUS = {
 
 def major_category_to_name(major_category):
     category_map = {
-        MAJOR.CS: "computer-science",
-        MAJOR.MEDIA: "media",
-        MAJOR.HCI: "human-computer-interaction",
-        MAJOR.OTHERMAJOR: "other",
-        MAJOR.OTHERS: "other"
+        MAJOR.CS: "Computer Science",
+        MAJOR.MEDIA: "Media",
+        MAJOR.HCI: "Human Computer Interaction",
+        MAJOR.OTHERMAJOR: "Other",
+        MAJOR.OTHERS: "Other"
     }
     return category_map[major_category]
 
@@ -44,7 +44,7 @@ def get_major_category_name(original_text):
     category_arr = get_major_category(original_text)
 
     if np.sum(category_arr) > 1:
-        return "double"
+        return "Double"
     
     category_idx = np.where(category_arr == 1)[1][0]
     return major_category_to_name(MAJOR(category_idx))
