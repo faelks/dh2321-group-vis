@@ -15,11 +15,20 @@ const yKey = "design_skill";
 const zKey = "teamwork_skill";
 const colorKey = "major";
 
-export default function ScatterChart({ data }) {
+// Return opacity based on group selection & inclusion
+function opacity(group, alias) {
+  if (!group.length) {
+    return 1;
+  }
+  return group.includes(alias) ? 1 : 0.5;
+}
+
+export default function ScatterChart({ data, onClick, group }) {
   const chartEl = useRef(null);
-  const [current, setCurrent] = useState();
 
   useEffect(() => {
+    d3.select("svg").remove();
+
     const x = d3
       .scaleLinear()
       .domain([0, 9])
@@ -56,14 +65,11 @@ export default function ScatterChart({ data }) {
       .attr("cx", (d) => x(d[xKey]))
       .attr("cy", (d) => y(d[yKey]))
       .attr("fill", (d) => colorScale(d[colorKey]))
-      .attr("r", (d) => z(d[zKey]));
+      .attr("r", (d) => z(d[zKey]))
+      .attr("opacity", (d) => opacity(group, d["alias"]));
 
     d3.selectAll("circle").on("click", function (event, item) {
-      // console.log("Clicked circle: ", i, dataRow);
-      // window._itemData = d;
-      // setCurrentData(d);
-      console.log(item);
-      setCurrent(item);
+      onClick(item);
     });
 
     // Add x axis label
@@ -71,7 +77,6 @@ export default function ScatterChart({ data }) {
       g
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(d3.axisBottom(x))
-        .call((g) => g.select(".domain").remove())
         .call((g) =>
           g
             .append("text")
@@ -89,7 +94,6 @@ export default function ScatterChart({ data }) {
       g
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y))
-        .call((g) => g.select(".domain").remove())
         .call((g) =>
           g
             .select(".tick:last-of-type text")
@@ -100,54 +104,7 @@ export default function ScatterChart({ data }) {
             .text(yKey)
         );
     svg.append("g").call(yAxis);
-  }, []);
+  }, [group]);
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.chart} ref={chartEl} />
-      <div className={styles.info}>
-        {current ? (
-          <div className={styles.item}>
-            <h2>Student: {current.alias}</h2>
-            <p>Major: {capitalize(current.major)}</p>
-            <p>Expectations: {current["course_expectations"]}</p>
-            <SkillDisplay
-              name="Design Skill"
-              value={current["design_skill"]}
-              diff={current["design_skill_diff"]}
-            />
-            <SkillDisplay
-              name="Technical Skill"
-              value={current["technical_skill"]}
-              diff={current["technical_skill_diff"]}
-            />
-            <SkillDisplay
-              name="Teamwork Skill"
-              value={current["teamwork_skill"]}
-              diff={current["teamwork_skill_diff"]}
-            />
-          </div>
-        ) : (
-          <p>
-            Click on one of the datapoints to see information about that student
-          </p>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function SkillDisplay({ name, value, diff }) {
-  const style = diff < 0 ? styles.negative : styles.positive;
-
-  return (
-    <p>
-      {name}: <span className={style}>{value.toPrecision(2)}</span>
-    </p>
-  );
-}
-
-function capitalize(s) {
-  if (typeof s !== "string") return "";
-  return s.charAt(0).toUpperCase() + s.slice(1);
+  return <div className={styles.chart} ref={chartEl} />;
 }
