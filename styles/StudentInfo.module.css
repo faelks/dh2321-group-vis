@@ -1,0 +1,22 @@
+.container {
+  flex: 1;
+  border: 1px solid red;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item p,
+.item h2 {
+  margin: 0 0 10px 0;
+}
+
+.positive {
+  color: #40e672;
+}
+
+.negative {
+  color: #e44a48;
+}
