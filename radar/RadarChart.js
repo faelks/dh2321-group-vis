@@ -40,6 +40,7 @@ var RadarChart = {
 	var total = allAxis.length;
 	var radius = cfg.factor*Math.min(cfg.w/2, cfg.h/2);
 	var Format = d3.format('%');
+	var Format_2f = d3.format('.2f');
 	d3.select(id).select("svg").remove();
 	
 	var g = d3.select(id)
@@ -84,7 +85,7 @@ var RadarChart = {
 	   .style("font-size", "10px")
 	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
 	   .attr("fill", "#737373")
-	   .text(Format((j+1)*cfg.maxValue/cfg.levels));
+	   .text(Format(Format_2f((j+1)*cfg.maxValue/cfg.levels)/10));
 	}
 	
 	series = 0;
@@ -162,6 +163,7 @@ var RadarChart = {
 
 
 	d.forEach(function(y, x){
+		
 	  g.selectAll(".nodes")
 		.data(y).enter()
 		.append("svg:circle")
@@ -181,6 +183,7 @@ var RadarChart = {
 		.attr("data-id", function(j){return j.axis})
 		.style("fill", cfg.color(series)).style("fill-opacity", .9)
 		.on('mouseover', function (d){
+			
 					newX =  parseFloat(d3.select(this).attr('cx')) - 10;
 					newY =  parseFloat(d3.select(this).attr('cy')) - 5;
 					
