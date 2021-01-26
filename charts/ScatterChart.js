@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import styles from "../styles/ScatterChart.module.css";
 import * as d3 from "d3";
+import { color } from "d3";
 
 const height = 450;
 const width = 450;
@@ -72,6 +73,46 @@ export default function ScatterChart({ data, onClick, group }) {
       onClick(item);
     });
 
+
+    // Create legend
+    var legend = svg
+      .selectAll(".legend")
+      .data(colorScale.domain())
+      .enter()
+      .append("g")
+      .attr("class","legend")
+      .attr("transform", function(d,i){
+        return "translate(0," + i*5 + ")";
+      });
+
+    legend
+      .append("circle")
+      .attr("cx",width-120)
+      .attr("cy",function(d,i){
+        return 5+i*5
+      })
+      .attr("r",2.5)
+      .style("fill", function(d){
+        return colorScale(d)
+      });
+
+    legend
+      .append("text")
+      .attr("font-size","0.5em")
+      .attr("x",width-112)
+      .attr("y",function(d,i){
+        return 7.5+i*5
+      })
+      .style("fill",function(d){
+        return colorScale(d)
+      })
+      .text(function(d){
+        return d;
+      })
+      .attr("text-anchor","left");
+
+
+
     // Add x axis label
     const xAxis = (g) =>
       g
@@ -105,6 +146,8 @@ export default function ScatterChart({ data, onClick, group }) {
         );
     svg.append("g").call(yAxis);
   }, [group]);
+
+
 
   return <div className={styles.chart} ref={chartEl} />;
 }
