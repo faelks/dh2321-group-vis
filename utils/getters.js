@@ -2,10 +2,14 @@ export function getItemByAlias(data, alias) {
   return data.find((i) => i.alias === alias);
 }
 
-export function getItemsByAlias(data, aliases) {
-  const result = {};
+export function getItemsByAlias(data, aliases, withAlias = true) {
+  const result = withAlias ? {} : [];
   for (const alias of aliases) {
-    result[alias] = getItemByAlias(data, alias);
+    if (withAlias) {
+      result[alias] = getItemByAlias(data, alias);
+    } else {
+      result.push(getItemByAlias(data, alias));
+    }
   }
   return result;
 }

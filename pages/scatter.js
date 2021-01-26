@@ -1,11 +1,17 @@
 import Head from "next/head";
+import { useState } from "react";
+
 import styles from "../styles/Scatter.module.css";
-import data from "../data/data_simplified.json";
 import ScatterChart from "../charts/ScatterChart";
 import { StudentInfo } from "../components/StudentInfo";
 import { GroupInfo } from "../components/GroupInfo";
-import { useState } from "react";
 import { getItemsByAlias } from "../utils/getters";
+import { calculateAverages } from "../utils/calculateAverages";
+
+import data from "../data/data_simplified.json";
+import dataWithKey from "../data/data_with_key.json";
+
+const dataAverages = calculateAverages(data);
 
 export default function Scatter() {
   const [currentStudent, setCurrentStudent] = useState();
@@ -13,7 +19,6 @@ export default function Scatter() {
   const [groupData, setGroupData] = useState();
 
   function handleOnClick(studentData) {
-    console.log(studentData);
     setCurrentStudent(studentData);
   }
 
@@ -50,7 +55,12 @@ export default function Scatter() {
             studentData={currentStudent}
             addToGroup={addStudentToGroup}
           />
-          <GroupInfo group={group} data={groupData} clear={clearGroup} />
+          <GroupInfo
+            group={group}
+            data={data}
+            dataAverages={dataAverages}
+            clear={clearGroup}
+          />
         </div>
       </div>
     </div>

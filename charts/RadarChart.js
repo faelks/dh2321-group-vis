@@ -1,64 +1,46 @@
-import {useEffect, useState} from "react";
 import * as d3 from "d3";
-import { RadarChartLib } from './RadarChartLib';
+import { useEffect } from "react";
+import { RadarChartLib } from "./RadarChartLib";
 
+const chartId = "radar-chart";
+const chartSelector = `#${chartId}`;
+const width = 350;
+const height = 350;
+const config = {
+  w: width,
+  h: height,
+  maxValue: 0.6,
+  levels: 6,
+  ExtraWidthX: 300,
+};
 
-var w = 500,
-	h = 500;
-
-// Legend titles
-var LegendOptions = [];
-
-//Options for the Radar chart, other than default
-var mycfg = {
-	w: w,
-	h: h,
-	maxValue: 0.6,
-	levels: 6,
-	ExtraWidthX: 300
-}
-
-//Data
-var d = [];
-
-function readAvg(avgData){
-    LegendOptions.push("Average");
-    var dItem = [];
-    for (var prop in avgData) {
-        dItem.push(
-            {axis: prop, value: parseFloat(avgData[prop])}
-        );
+function transformData(data) {
+  const result = [];
+  for (const item of data) {
+    const itemResult = [];
+    for (const key in item) {
+      itemResult.push({
+        axis: key,
+        value: item[key],
+      });
     }
-    d.push(dItem);
+    result.push(itemResult);
+  }
+  return result;
 }
 
-// Select data with an array of alias
-function selectData(data, aliasArr) {
-	var dItemGroup = [];
-	var avgItem = [];
-    aliasArr.forEach(function (alias, _) {
-        var dItem = data[alias];
-        dItemGroup.push(dItem);
-    });
-    dItemGroup[0].forEach(function(axisItem, index) {
-        avgItem.push({
-            axis: axisItem.axis,
-            value: d3.mean(dItemGroup.map(dItem => dItem[index].value))
-        });
-    });
-    d.push(avgItem);
-}
+export default function RadarChart({ data }) {
+  if (!data) {
+    return null;
+  }
 
-export default function RadarChart({data, avgData}) {
-    const [group, setGrop] = useState(["NoobKiz", "Monokuma"]);
-    readAvg(avgData);
-    
-    useEffect(() => {
-        selectData(data, group);
-        RadarChartLib.draw("#chart", d, mycfg);
-    });
-    return (
-        <div id="chart"/>
-    )
-}
+  useEffect(() => {
+    d3.select(chartSelector).select("svg").remove();
 
+    const transformedData = transformData(data);
+    console.log(transformedData);
+    RadarChartLib.draw(chartSelector, transformedData, config);
+  });
+
+  return <div id={chartId} />;
+}
