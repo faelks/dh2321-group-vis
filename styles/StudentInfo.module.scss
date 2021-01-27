@@ -1,5 +1,5 @@
 .container {
-  height: 220px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   padding: var(--inner-padding);
@@ -23,17 +23,19 @@
 
 .actionButton {
   width: 150px;
+  cursor: pointer;
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 110px;
   padding: 5px 0;
 }
 
 .columnBig {
   flex: 3;
+  overflow: scroll;
 }
 
 .columnSmall {

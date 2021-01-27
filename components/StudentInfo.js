@@ -1,16 +1,4 @@
 import styles from "../styles/StudentInfo.module.scss";
-import { capitalize } from "../utils/string";
-import { useEffect } from "react";
-
-function SkillDisplay({ name, value, diff }) {
-  const style = diff < 0 ? styles.negative : styles.positive;
-
-  return (
-    <p>
-      {name}: <span className={style}>{value.toPrecision(2)}</span>
-    </p>
-  );
-}
 
 export function StudentInfo({
   studentData,
@@ -37,9 +25,11 @@ export function StudentInfo({
           <p className={styles.headerText}>
             Student: {d.alias || "None"} {d.major ? `- ${d.major}` : ""}
           </p>
-          <button className={styles.actionButton} onClick={handleGroupAction}>
-            {inGroup ? "Remove from Group" : "Add to Group"}
-          </button>
+          {studentData && (
+            <button className={styles.actionButton} onClick={handleGroupAction}>
+              {inGroup ? "Remove from Group" : "Add to Group"}
+            </button>
+          )}
         </div>
         <div className={styles.content}>
           <div className={styles.columnBig}>
@@ -87,11 +77,5 @@ function Pill({ label, value, average }) {
     <div className={className}>
       {label}: {value.toPrecision(2)}
     </div>
-  );
-}
-
-function Placeholder() {
-  return (
-    <p>Click on one of the datapoints to see information about that student</p>
   );
 }
