@@ -103,6 +103,7 @@ export default function ScatterChart({ data, onClick, group }) {
       .attr("stroke-width", 2.5)
       .attr("fill", "none")
       .attr("r", (d) => z(d[zKey]))
+      .attr("cursor", "pointer")
       .attr("opacity", (d) => opacity(group, d["alias"]));
 
     d3.selectAll("circle").on("click", function (event, item) {
