@@ -24,6 +24,40 @@ function opacity(group, alias) {
   return group.includes(alias) ? 1 : 0.5;
 }
 
+function addSizeLegend(svg) {
+  const sizeLegend = svg
+    .selectAll(".size-legend")
+    .data([2, 4, 7, 10])
+    .enter()
+    .append("g")
+    .attr("class", "size-legend");
+
+  sizeLegend
+    .append("circle")
+    .attr("cx", 52)
+    .attr("cy", (d, i) => 110 + 15 * i)
+    .attr("r", (d) => z(d))
+    .style("fill", "none")
+    .attr("stroke", "gray")
+    .attr("stroke-width", 2.5);
+
+  sizeLegend
+    .append("text")
+    .attr("font-size", "7px")
+    .attr("fill", "gray")
+    .attr("x", 45)
+    .attr("y", 100)
+    .text("teamwork_skill");
+
+  sizeLegend
+    .append("text")
+    .attr("font-size", "7px")
+    .attr("fill", "gray")
+    .attr("x", 62)
+    .attr("y", (_d, i) => 113 + 15 * i)
+    .text((d) => d);
+}
+
 export default function ScatterChart({ data, onClick, group }) {
   const chartEl = useRef(null);
 
@@ -44,7 +78,7 @@ export default function ScatterChart({ data, onClick, group }) {
     const z = d3
       .scaleLinear()
       .domain(d3.extent(data, (d) => d[zKey]))
-      .range([2, 6])
+      .range([2, 5])
       .clamp(true);
 
     const colorScale = d3
@@ -65,7 +99,9 @@ export default function ScatterChart({ data, onClick, group }) {
       .join("circle")
       .attr("cx", (d) => x(d[xKey]))
       .attr("cy", (d) => y(d[yKey]))
-      .attr("fill", (d) => colorScale(d[colorKey]))
+      .attr("stroke", (d) => colorScale(d[colorKey]))
+      .attr("stroke-width", 2.5)
+      .attr("fill", "none")
       .attr("r", (d) => z(d[zKey]))
       .attr("opacity", (d) => opacity(group, d["alias"]));
 
@@ -86,9 +122,9 @@ export default function ScatterChart({ data, onClick, group }) {
 
     legend
       .append("circle")
-      .attr("cx", width - 120)
+      .attr("cx", 50)
       .attr("cy", function (d, i) {
-        return 5 + i * 5;
+        return 45 + i * 5;
       })
       .attr("r", 2.5)
       .style("fill", function (d) {
@@ -97,10 +133,10 @@ export default function ScatterChart({ data, onClick, group }) {
 
     legend
       .append("text")
-      .attr("font-size", "0.5em")
-      .attr("x", width - 112)
+      .attr("font-size", "7px")
+      .attr("x", 55)
       .attr("y", function (d, i) {
-        return 7.5 + i * 5;
+        return 47 + i * 5;
       })
       .style("fill", function (d) {
         return colorScale(d);
@@ -109,6 +145,8 @@ export default function ScatterChart({ data, onClick, group }) {
         return d;
       })
       .attr("text-anchor", "left");
+
+    addSizeLegend(svg);
 
     // Add x axis label
     const xAxis = (g) =>
