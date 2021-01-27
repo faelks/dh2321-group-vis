@@ -35,6 +35,16 @@ export default function Scatter() {
     setGroupData(getItemsByAlias(data, newGroup));
   }
 
+  function removeFromGroup(studentAlias) {
+    if (!group.includes(studentAlias)) {
+      return;
+    }
+
+    const newGroup = group.filter((a) => a !== studentAlias);
+    setGroup(newGroup);
+    setGroupData(getItemsByAlias(data, newGroup));
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -52,8 +62,11 @@ export default function Scatter() {
         </div>
         <div className={styles.column}>
           <StudentInfo
+            group={group}
             studentData={currentStudent}
             addToGroup={addStudentToGroup}
+            removeFromGroup={removeFromGroup}
+            averages={dataAverages}
           />
           <GroupInfo
             group={group}

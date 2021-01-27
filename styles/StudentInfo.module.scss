@@ -1,0 +1,88 @@
+.container {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--inner-padding);
+  border-radius: var(--border-radius);
+  background-color: var(--main-fg-color);
+  box-shadow: var(--box-shadow);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.headerText {
+  margin: 0;
+  color: var(--text-color-1);
+}
+
+.actionButton {
+  width: 150px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 5px 0;
+}
+
+.columnBig {
+  flex: 3;
+}
+
+.columnSmall {
+  flex: 1;
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--main-border-color);
+  margin: 5px;
+}
+
+.content p {
+  margin: 0;
+  font-size: var(--text-font-size);
+}
+
+.content > * > p {
+  margin-bottom: 5px;
+}
+
+.pills {
+  width: 350px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pill {
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  background-color: white;
+  border-top: none;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.pillPositive {
+  @extend .pill;
+  background-color: #40e672;
+  color: white;
+}
+
+.pillNegative {
+  @extend .pill;
+  background-color: #e44a48;
+  color: white;
+}

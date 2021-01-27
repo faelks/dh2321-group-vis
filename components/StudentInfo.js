@@ -1,4 +1,4 @@
-import styles from "../styles/StudentInfo.module.css";
+import styles from "../styles/StudentInfo.module.scss";
 import { capitalize } from "../utils/string";
 import { useEffect } from "react";
 
@@ -12,48 +12,80 @@ function SkillDisplay({ name, value, diff }) {
   );
 }
 
-export function StudentInfo({ studentData, addToGroup }) {
+export function StudentInfo({
+  studentData,
+  addToGroup,
+  averages,
+  group,
+  removeFromGroup,
+}) {
+  const d = studentData || {};
+  const inGroup = group.includes(d.alias);
+
+  function handleGroupAction() {
+    if (inGroup) {
+      removeFromGroup(d.alias);
+    } else {
+      addToGroup(d.alias);
+    }
+  }
+
   return (
-    <div className={styles.container}>
-      {studentData ? (
-        <>
-          <div className={styles.header}>
-            <p>Student</p>
-            <h2>
-              {studentData.alias} - {studentData.major}
-            </h2>
+    <>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <p className={styles.headerText}>
+            Student: {d.alias || "None"} {d.major ? `- ${d.major}` : ""}
+          </p>
+          <button className={styles.actionButton} onClick={handleGroupAction}>
+            {inGroup ? "Remove from Group" : "Add to Group"}
+          </button>
+        </div>
+        <div className={styles.content}>
+          <div className={styles.columnBig}>
+            <p>Hobbies: {d.hobbies}</p>
+            <p>Expectations: {d.course_expectations}</p>
+            <p>In 5 years: {d.in_5_years}</p>
           </div>
-          <div className={styles.body}>
-            <div className={styles.column}>
-              <SkillDisplay
-                name="Design"
-                value={studentData["design_skill"]}
-                diff={studentData["design_skill_diff"]}
-              />
-              <SkillDisplay
-                name="Technical"
-                value={studentData["technical_skill"]}
-                diff={studentData["technical_skill_diff"]}
-              />
-              <SkillDisplay
-                name="Teamwork"
-                value={studentData["teamwork_skill"]}
-                diff={studentData["teamwork_skill_diff"]}
-              />
-            </div>
-            <div className={styles.column}>
-              <p>Expectations: {studentData["course_expectations"]}</p>
-            </div>
-            <div className={styles.column}>
-              <button onClick={() => addToGroup(studentData.alias)}>
-                Add to Group
-              </button>
-            </div>
+          <div className={styles.divider} />
+          <div className={styles.columnSmall}>
+            <p>Social Channel Usage</p>
+            <p>KTH Canvas: {d.kth_canvas_usage}/3</p>
+            <p>KTH Social: {d.kth_social_usage}/3</p>
+            <p>Facebook: {d.facebook_usage}/3</p>
           </div>
-        </>
-      ) : (
-        <Placeholder />
+        </div>
+      </div>
+      {studentData && (
+        <div className={styles.pills}>
+          <Pill
+            label="Technical"
+            value={d.technical_skill}
+            average={averages.technical_skill}
+          />
+          <Pill
+            label="Design"
+            value={d.design_skill}
+            average={averages.design_skill}
+          />
+          <Pill
+            label="Teamwork"
+            value={d.teamwork_skill}
+            average={averages.teamwork_skill}
+          />
+        </div>
       )}
+    </>
+  );
+}
+
+function Pill({ label, value, average }) {
+  const className =
+    value >= average ? styles.pillPositive : styles.pillNegative;
+
+  return (
+    <div className={className}>
+      {label}: {value.toPrecision(2)}
     </div>
   );
 }
