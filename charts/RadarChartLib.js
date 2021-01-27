@@ -46,11 +46,12 @@ export var RadarChartLib = {
     var Format_2f = d3.format(".2f");
     d3.select(id).select("svg").remove();
 
-    var g = d3
-      .select(id)
-      .append("svg")
-      .attr("width", cfg.w + cfg.ExtraWidthX)
-      .attr("height", cfg.h + cfg.ExtraWidthY)
+    const svg = d3
+    .select(id)
+    .append("svg")
+    .attr("width", cfg.w + cfg.ExtraWidthX)
+    .attr("height", cfg.h + cfg.ExtraWidthY);
+    var g = svg
       .append("g")
       .attr(
         "transform",
@@ -203,6 +204,7 @@ export var RadarChartLib = {
         ]);
       });
       dataValues.push(dataValues[0]);
+      console.log(cfg.color, series);
       g.selectAll(".area")
         .data([dataValues])
         .enter()
@@ -317,5 +319,45 @@ export var RadarChartLib = {
       .style("opacity", 0)
       .style("font-family", "sans-serif")
       .style("font-size", "13px");
+
+    var domain = d.length == 1 ? ["Average"] : ["Average", "Formed"];
+    var legend = svg
+      .selectAll(".colorLegend")
+      .data(domain)
+      .enter()
+      .append("g")
+      .attr("class", "legend")
+      .attr("transform", function (d, i) {
+        return "translate(0," + i * 5 + ")";
+      });
+
+      
+    legend
+      .append("circle")
+      .attr("cx", cfg.w - 310)
+      .attr("cy", function (d, i) {
+        return 9 + i * 5;
+      })
+      .attr("r", 2.5)
+      .style("fill", function (d) {
+        if(d == "Average") return cfg.color(0);
+        return cfg.color(1);
+      });
+
+    legend
+      .append("text")
+      .attr("font-size", "0.5em")
+      .attr("x", cfg.w - 302)
+      .attr("y", function (d, i) {
+        return 11.5 + i * 5;
+      })
+      .style("fill", function (d) {
+        if(d == "Average") return cfg.color(0);
+        return cfg.color(1);
+      })
+      .text(function (d) {
+        return d;
+      })
+      .attr("text-anchor", "left");
   },
 };
