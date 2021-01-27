@@ -49,7 +49,6 @@ export default function RadarChart({ data }) {
     d3.select(chartSelector).select("svg").remove();
 
     const transformedData = transformData(data);
-    console.log(transformedData);
     RadarChartLib.draw(chartSelector, transformedData, config);
   });
 

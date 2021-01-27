@@ -204,7 +204,6 @@ export var RadarChartLib = {
         ]);
       });
       dataValues.push(dataValues[0]);
-      console.log(cfg.color, series);
       g.selectAll(".area")
         .data([dataValues])
         .enter()
@@ -320,7 +319,7 @@ export var RadarChartLib = {
       .style("font-family", "sans-serif")
       .style("font-size", "13px");
 
-    var domain = d.length == 1 ? ["Average"] : ["Average", "Formed"];
+    var domain = d.length == 1 ? ["Student Mean"] : ["Student Mean", "Formed Group Mean"];
     var legend = svg
       .selectAll(".colorLegend")
       .data(domain)
@@ -340,19 +339,19 @@ export var RadarChartLib = {
       })
       .attr("r", 2.5)
       .style("fill", function (d) {
-        if(d == "Average") return cfg.color(0);
+        if(d == "Student Mean") return cfg.color(0);
         return cfg.color(1);
       });
 
     legend
       .append("text")
-      .attr("font-size", "0.5em")
+      .attr("font-size", "10.5px")
       .attr("x", cfg.w - 302)
       .attr("y", function (d, i) {
         return 11.5 + i * 5;
       })
       .style("fill", function (d) {
-        if(d == "Average") return cfg.color(0);
+        if(d == "Student Mean") return cfg.color(0);
         return cfg.color(1);
       })
       .text(function (d) {

@@ -24,7 +24,7 @@ function opacity(group, alias) {
   return group.includes(alias) ? 1 : 0.5;
 }
 
-function addSizeLegend(svg) {
+function addSizeLegend(svg, z) {
   const sizeLegend = svg
     .selectAll(".size-legend")
     .data([2, 4, 7, 10])
@@ -147,7 +147,7 @@ export default function ScatterChart({ data, onClick, group }) {
       })
       .attr("text-anchor", "left");
 
-    addSizeLegend(svg);
+    addSizeLegend(svg, z);
 
     // Add x axis label
     const xAxis = (g) =>
