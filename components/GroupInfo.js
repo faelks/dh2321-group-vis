@@ -39,9 +39,9 @@ export function GroupInfo({ group, data, averages, clear }) {
         </div>
         {groupAverages && (
           <div className={styles.summary}>
-            <p>Technical: {groupAverages.technical_skill.toPrecision(1)}</p>
-            <p>Design: {groupAverages.design_skill.toPrecision(1)}</p>
-            <p>Teamwork: {groupAverages.teamwork_skill.toPrecision(1)}</p>
+            <p>Technical: {groupAverages.technical_skill.toPrecision(1)}&nbsp;
+            Design: {groupAverages.design_skill.toPrecision(1)}&nbsp;
+            Teamwork: {groupAverages.teamwork_skill.toPrecision(1)}</p>
           </div>
         )}
 
