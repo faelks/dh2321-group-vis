@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 
-import styles from "../styles/Scatter.module.css";
+import styles from "../styles/Scatter.module.scss";
 import ScatterChart from "../charts/ScatterChart";
 import { StudentInfo } from "../components/StudentInfo";
 import { GroupInfo } from "../components/GroupInfo";
@@ -71,7 +71,7 @@ export default function Scatter() {
           <GroupInfo
             group={group}
             data={data}
-            dataAverages={dataAverages}
+            averages={dataAverages}
             clear={clearGroup}
           />
         </div>

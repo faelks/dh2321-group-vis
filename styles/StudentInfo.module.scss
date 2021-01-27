@@ -64,27 +64,4 @@
   justify-content: space-between;
 }
 
-.pill {
-  width: 100px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 5px;
-  background-color: white;
-  border-top: none;
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
 
-.pillPositive {
-  @extend .pill;
-  background-color: #40e672;
-  color: white;
-}
-
-.pillNegative {
-  @extend .pill;
-  background-color: #e44a48;
-  color: white;
-}

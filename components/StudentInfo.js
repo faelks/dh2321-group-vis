@@ -1,4 +1,5 @@
 import styles from "../styles/StudentInfo.module.scss";
+import { Pill } from "./Pill";
 
 export function StudentInfo({
   studentData,
@@ -66,16 +67,5 @@ export function StudentInfo({
         </div>
       )}
     </>
-  );
-}
-
-function Pill({ label, value, average }) {
-  const className =
-    value >= average ? styles.pillPositive : styles.pillNegative;
-
-  return (
-    <div className={className}>
-      {label}: {value.toPrecision(2)}
-    </div>
   );
 }

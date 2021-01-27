@@ -1,9 +1,0 @@
-.container {
-  flex: 3;
-}
-
-.container svg {
-  border-radius: var(--border-radius);
-  background-color: var(--main-fg-color);
-  box-shadow: var(--box-shadow);
-}

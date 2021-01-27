@@ -4,8 +4,8 @@ import { RadarChartLib } from "./RadarChartLib";
 
 const chartId = "radar-chart";
 const chartSelector = `#${chartId}`;
-const width = 350;
-const height = 350;
+const width = 325;
+const height = 325;
 const config = {
   w: width,
   h: height,
@@ -14,15 +14,26 @@ const config = {
   ExtraWidthX: 180,
 };
 
+const keysToRemove = [
+  "technical_skill",
+  "design_skill",
+  "teamwork_skill",
+  "kth_social_usage",
+  "kth_canvas_usage",
+  "facebook_usage",
+];
+
 function transformData(data) {
   const result = [];
   for (const item of data) {
     const itemResult = [];
     for (const key in item) {
-      itemResult.push({
-        axis: key,
-        value: item[key],
-      });
+      if (!keysToRemove.includes(key)) {
+        itemResult.push({
+          axis: key,
+          value: item[key],
+        });
+      }
     }
     result.push(itemResult);
   }
