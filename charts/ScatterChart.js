@@ -8,8 +8,8 @@ const width = 450;
 const margin = {
   top: 20,
   right: 20,
-  bottom: 20,
-  left: 40,
+  bottom: 30,
+  left: 30,
 };
 const xKey = "technical_skill";
 const yKey = "design_skill";
@@ -44,7 +44,7 @@ export default function ScatterChart({ data, onClick, group }) {
     const z = d3
       .scaleLinear()
       .domain(d3.extent(data, (d) => d[zKey]))
-      .range([3, 7])
+      .range([2, 6])
       .clamp(true);
 
     const colorScale = d3
@@ -73,45 +73,42 @@ export default function ScatterChart({ data, onClick, group }) {
       onClick(item);
     });
 
-
     // Create legend
     var legend = svg
       .selectAll(".legend")
       .data(colorScale.domain())
       .enter()
       .append("g")
-      .attr("class","legend")
-      .attr("transform", function(d,i){
-        return "translate(0," + i*5 + ")";
+      .attr("class", "legend")
+      .attr("transform", function (d, i) {
+        return "translate(0," + i * 5 + ")";
       });
 
     legend
       .append("circle")
-      .attr("cx",width-120)
-      .attr("cy",function(d,i){
-        return 5+i*5
+      .attr("cx", width - 120)
+      .attr("cy", function (d, i) {
+        return 5 + i * 5;
       })
-      .attr("r",2.5)
-      .style("fill", function(d){
-        return colorScale(d)
+      .attr("r", 2.5)
+      .style("fill", function (d) {
+        return colorScale(d);
       });
 
     legend
       .append("text")
-      .attr("font-size","0.5em")
-      .attr("x",width-112)
-      .attr("y",function(d,i){
-        return 7.5+i*5
+      .attr("font-size", "0.5em")
+      .attr("x", width - 112)
+      .attr("y", function (d, i) {
+        return 7.5 + i * 5;
       })
-      .style("fill",function(d){
-        return colorScale(d)
+      .style("fill", function (d) {
+        return colorScale(d);
       })
-      .text(function(d){
+      .text(function (d) {
         return d;
       })
-      .attr("text-anchor","left");
-
-
+      .attr("text-anchor", "left");
 
     // Add x axis label
     const xAxis = (g) =>
@@ -147,7 +144,12 @@ export default function ScatterChart({ data, onClick, group }) {
     svg.append("g").call(yAxis);
   }, [group]);
 
-
-
-  return <div className={styles.chart} ref={chartEl} />;
+  return (
+    <div className={styles.container}>
+      <div className={styles.chart}>
+        <p>Distribution of student design, technical and teamwork skills</p>
+        <div ref={chartEl} />
+      </div>
+    </div>
+  );
 }

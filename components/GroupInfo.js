@@ -21,6 +21,7 @@ export function GroupInfo({ group, data, dataAverages, clear }) {
 
   return (
     <div className={styles.container}>
+      <p>Group</p>
       {group.length ? <p>New Group: {group.join(",")}</p> : null}
       <button onClick={clear}>Clear Group</button>
       <RadarChart data={radarChartData} />

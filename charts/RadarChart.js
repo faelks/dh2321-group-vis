@@ -11,7 +11,7 @@ const config = {
   h: height,
   maxValue: 0.6,
   levels: 6,
-  ExtraWidthX: 300,
+  ExtraWidthX: 180,
 };
 
 function transformData(data) {

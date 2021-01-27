@@ -1,15 +1,17 @@
 .container {
   /* 1/4th of right page column */
-  flex: 1; 
+  flex: 1;
   min-height: 150px;
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  background-color: var(--main-fg-color);
+  box-shadow: var(--box-shadow);
 }
 
-.container p, .container h2 {
+.container p,
+.container h2 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;

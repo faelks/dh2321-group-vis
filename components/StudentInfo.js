@@ -18,6 +18,7 @@ export function StudentInfo({ studentData, addToGroup }) {
       {studentData ? (
         <>
           <div className={styles.header}>
+            <p>Student</p>
             <h2>
               {studentData.alias} - {studentData.major}
             </h2>
