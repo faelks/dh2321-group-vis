@@ -126,7 +126,10 @@ export var RadarChartLib = {
             ")"
         )
         .attr("fill", "#737373")
-        .text(Format(Format_2f(((j + 1) * cfg.maxValue) / cfg.levels) / 10));
+        .text(() => {
+          let val = Format_2f(((j + 1) * cfg.maxValue) / cfg.levels);
+          return `${(val * 10).toPrecision(3)}%`;
+        });
     }
 
     var series = 0;
@@ -278,14 +281,16 @@ export var RadarChartLib = {
         })
         .style("fill", cfg.color(series))
         .style("fill-opacity", 0.9)
-        .on("mouseover", function (d) {
+        .on("mouseover", function (d, i) {
           var newX = parseFloat(d3.select(this).attr("cx")) - 10;
           var newY = parseFloat(d3.select(this).attr("cy")) - 5;
 
           tooltip
             .attr("x", newX)
             .attr("y", newY)
-            .text(Format(d.value))
+            .text(() => {
+              return i.value.toPrecision(2);
+            })
             .transition(200)
             .style("opacity", 1);
 
