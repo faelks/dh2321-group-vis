@@ -24,7 +24,8 @@ export function StudentInfo({
       <div className={styles.container}>
         <div className={styles.header}>
           <p className={styles.headerText}>
-            Student: {d.alias || "None"} {d.major ? `- ${d.major}` : ""}
+            Student: {d.alias || "None - Select a student to get started"}{" "}
+            {d.major ? `- ${d.major}` : ""}
           </p>
           {studentData && (
             <button className={styles.actionButton} onClick={handleGroupAction}>
