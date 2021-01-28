@@ -48,11 +48,11 @@ export default function Scatter() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>DH2320 Group Vis</title>
+        <title>DH2321 Group Vis</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.header}>
-        <h1>DH2320 - Group Visualisation</h1>
+        <h1>DH2321 - Information Visualization</h1>
         <p>Felix Gudéhn, Zezhe Huang, Xinyi Wang</p>
       </div>
 
