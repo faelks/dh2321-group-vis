@@ -1,7 +1,10 @@
 # Group Vis Project
+Source code for the group skill and preference visualisation for the course DH2321 - Information Visualization at KTH.
 
-## Todo
-[ ] Figure out how to deal with occlusion in scatter plot
-[ ] Add scatterplot legend 
-[ ] Update student info design
-[ ] Add radarplot to group selection
+[Link to live project](https://dh2320-group-vis.vercel.app/scatter)
+
+## Authors
+Felix Gudéhn
+Xinyi Wang
+Zezhe Huang
+
