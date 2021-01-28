@@ -9,8 +9,16 @@
   padding: var(--inner-padding);
 }
 
-.chart p {
+.chart .title {
   font-size: 16px;
   color: var(--text-color-1);
   margin: 0;
+  text-align: center;
+}
+
+.chart .caption {
+  margin: 0;
+  margin-top: -20px;
+  color: var(--text-color-1);
+  font-size: 11px;
 }

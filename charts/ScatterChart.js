@@ -1,7 +1,6 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import styles from "../styles/ScatterChart.module.css";
 import * as d3 from "d3";
-import { color } from "d3";
 
 const height = 450;
 const width = 450;
@@ -186,8 +185,17 @@ export default function ScatterChart({ data, onClick, group }) {
   return (
     <div className={styles.container}>
       <div className={styles.chart}>
-        <p>Distribution of student design, technical and teamwork skills</p>
+        <p className={styles.title}>
+          Distribution of student design, technical and teamwork skills
+        </p>
         <div ref={chartEl} />
+        <p className={styles.caption}>
+          The main axes of the chart display mean skill values based on
+          the following classifications of skills: (Technical): Statistics,
+          Maths, Computer, Programming; (Design): Information Visualisation,
+          Drawing, Human-Computer Interaction, User Experience; (Teamwork):
+          Communication, Collaboration.
+        </p>
       </div>
     </div>
   );
